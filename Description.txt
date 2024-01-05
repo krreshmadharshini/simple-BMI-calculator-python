@@ -1,0 +1,66 @@
+BMI Calculator
+
+Description of the python program
+
+Procedural Programming Paradigm:
+
+Step 1: Import the Tkinter module
+•	This imports the Tkinter module, which is the standard GUI toolkit for Python.
+
+Step 2: Define the 'calculate_bmi' function
+•	This function is called when the "Calculate BMI" button is pressed.
+•	It attempts to convert the user-entered weight and height to floats and calculates the BMI.
+•	Updates the 'result_label' with the calculated BMI and a green color.
+•	Based on the BMI value, it updates the 'feedback_label' with a corresponding message and color.
+
+Step 3: Create the main Tkinter window
+•	Creates the main window for the BMI Calculator application.
+•	Sets the title of the window to "BMI Calculator".
+
+Step 4: Create and place widgets in the window
+•	Creates labels, entry widgets, and a button for weight, height, and the "Calculate BMI" button.
+•	Configures the layout of these widgets using the 'grid' geometry manager.
+•	Initializes 'result_label' and 'feedback_label' with empty text and black color.
+
+Step 5: Start the main event loop
+•	Enters the Tkinter event loop, allowing the application to respond to user interactions.
+
+In summary, this code creates a simple BMI calculator GUI using Tkinter. 
+Users can input their weight and height, press the "Calculate BMI" button, and receive feedback on their BMI category along with additional information. 
+The GUI is structured using labels, entry widgets, and buttons, and the logic is encapsulated in the 'calculate_bmi' function.
+
+
+Object Oriented Approach:
+
+Step 1: Import the Tkinter module
+•	Imports the Tkinter module, which provides tools for creating graphical user interfaces.
+
+Step 2: Define the 'BMI_Calculator' class
+•	Defines a class named 'BMI_Calculator'.
+•	The '__init__' method is the class constructor. 
+  It initializes the class instance with the main Tkinter window ('root'), sets the window title to "BMI Calculator", and calls the 'create_widgets' method.
+
+Step 3: Create widgets within the 'create_widgets' method
+•	'tk.Label' creates labels for "Weight" and "Height."
+•	'tk.Entry' creates entry widgets for users to input their weight and height.
+•	'tk.Button' creates a button labeled "Calculate BMI" with the 'command' parameter set to the 'calculate_bmi' method.
+•	'tk.Label' creates labels for displaying the result and feedback, initialized with empty text and black color.
+•	Widgets are placed in the window using the 'grid' geometry manager.
+
+Step 4: Define the 'calculate_bmi' method
+•	Converts user-inputted weight and height to floats, calculates BMI, and updates the 'result_label' with the result in green color.
+•	Creates an instance of 'BMI_FeedbackGenerator' to get feedback and updates the 'feedback_label' with the corresponding message and color.
+•	Handles 'ValueError' in case of invalid input and updates labels accordingly.
+
+Step 5: Define the 'BMI_FeedbackGenerator' class
+•	Defines a class named 'BMI_FeedbackGenerator' responsible for determining feedback messages and text colors based on BMI categories.
+
+Step 6: Application entry point:
+•	Checks if the script is being run as the main program.
+•	Creates an instance of 'tk.Tk()' to initialize the Tkinter main window.
+•	Creates an instance of 'BMI_Calculator', which in turn initializes the GUI elements.
+•	Starts the Tkinter event loop with 'root.mainloop()' to make the application interactive.
+
+In summary, this code defines a BMI calculator using Tkinter with a class-based approach, where each aspect of the application 
+(GUI, calculations, feedback generation) is encapsulated in separate classes or methods, making the code more organized and modular. 
+The Tkinter library is used for creating the graphical user interface, and the application provides feedback based on the calculated BMI.
